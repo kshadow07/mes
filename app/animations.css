@@ -1,0 +1,39 @@
+@keyframes gearRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pistonMove {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes leverPull {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+.animate-gear {
+  animation: gearRotate 10s linear infinite;
+}
+
+.animate-piston {
+  animation: pistonMove 2s ease-in-out infinite;
+}
+
+.animate-lever {
+  animation: leverPull 3s ease-in-out infinite;
+}
+
