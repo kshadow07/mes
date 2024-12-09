@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Calendar, User, Tag } from 'lucide-react'
 
-export default function BlogPost({}: { params: { slug: string } }) {
+export default function BlogPost() {
   // In a real application, you would fetch the blog post data based on the slug
   const post = {
     title: 'The Future of Sustainable Engineering',
