@@ -23,21 +23,21 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Facebook className="h-6 w-6" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://x.com/mes_bitsindri" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-6 w-6" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://www.linkedin.com/company/mechanical-engineering-society-bit-sindri-dhanbad/?originalSubdomain=in" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-6 w-6" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/mes.bitsindri/" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Linkedin className="h-6 w-6" />
-                <span className="sr-only">LinkedIn</span>
+              <a href="https://www.facebook.com/mes.bitsindri/" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-6 w-6" />
+                <span className="sr-only">Facebook</span>
               </a>
             </div>
           </div>

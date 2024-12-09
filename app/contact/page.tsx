@@ -44,7 +44,7 @@ export default function ContactUs() {
           {/* Map Section */}
           <div className="mt-12">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.457965416!2d86.47742661486946!3d23.653435584636536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bc9fac678481%3A0x122cb1d133a89995!2sBIT%20Sindri!5e0!3m2!1sen!2sin!4v1629901266061!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5960256802!2d86.47110607602096!3d23.654634192444913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f696e95958a6d5%3A0x7c14e668e6f2feea!2sBIT%20Sindri!5e0!3m2!1sen!2sin!4v1733748583414!5m2!1sen!2sin" 
               width="100%"
               height="450"
               style={{ border: 0 }}

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -75,8 +76,15 @@ export function Navbar() {
       <div className="hidden sm:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex">
-              <Link href="/" className="flex-shrink-0 flex items-center">
+            <div className="flex items-center">
+              <Link href="/" className="flex-shrink-0 flex items-center pr-10">
+                <Image
+                  src="/images/3.png"
+                  alt="MES Logo"
+                  width={40}
+                  height={40}
+                  className="mr-2"
+                />
                 <span className="text-xl font-bold">MES</span>
               </Link>
               <div className="ml-6 flex space-x-8">
