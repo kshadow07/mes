@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Calendar, MapPin, Clock, Users } from 'lucide-react'
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Calendar, MapPin, Clock } from 'lucide-react';
 
-export default function EventPage({ params }: { params: { slug: string } }) {
-  // In a real application, you would fetch the event data based on the slug
+export default function EventPage() {
   const event = {
     title: 'Annual Engineering Symposium',
     date: '2023-09-15',
@@ -26,7 +25,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
       { time: '03:30 PM', activity: 'Student Project Showcase' },
       { time: '04:30 PM', activity: 'Closing Remarks and Prize Giving' },
     ],
-  }
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -101,59 +100,6 @@ export default function EventPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
-
-      {/* Registration CTA */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Join Us?</h2>
-          <p className="text-xl mb-8">Don't miss this opportunity to learn, network, and grow!</p>
-          <Button size="lg" variant="secondary">Register for the Event</Button>
-        </div>
-      </section>
-
-      {/* Additional Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Additional Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Who Should Attend?</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Mechanical Engineering students</li>
-                  <li>Faculty members</li>
-                  <li>Industry professionals</li>
-                  <li>Researchers in related fields</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">What to Bring</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Student ID or professional ID</li>
-                  <li>Notebook and pen</li>
-                  <li>Business cards for networking</li>
-                  <li>Laptop (optional, for workshops)</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Need More Information?</h2>
-          <div className="text-center">
-            <p className="text-lg mb-4">If you have any questions about the event, please don't hesitate to contact us:</p>
-            <p className="text-lg font-semibold">Email: events@mesociety.com</p>
-            <p className="text-lg font-semibold">Phone: (123) 456-7890</p>
-          </div>
-        </div>
-      </section>
     </div>
-  )
+  );
 }
-

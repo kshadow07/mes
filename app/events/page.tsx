@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Calendar, MapPin, Clock, Search, Pen, Rocket, Users, Droplet, BookOpenCheck, Building2, Trophy, Leaf, Building } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {Search, Pen, Rocket, Users, Droplet,Trophy, Leaf, Building } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Events() {

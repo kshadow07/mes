@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
-import { ModeToggle } from '@/components/mode-toggle'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
