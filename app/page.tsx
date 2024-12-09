@@ -8,37 +8,133 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">
-              Mechanical Engineering Society
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 animate-fade-in-up animation-delay-200">
-              B.I.T Sindri
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-400">
-              Empowering future engineers through holistic development and innovation
-            </p>
-            <Button size="lg" className="animate-fade-in-up animation-delay-600">
-              Join MES
-            </Button>
+      <section className="relative bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="mb-8">
+            <Image
+              src="/images/4.png"
+              alt="MES Logo"
+              width={150}
+              height={150}
+              className="mx-auto"
+              priority
+            />
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+            Mechanical Engineering Society
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-200">
+            Empowering future engineers through innovation and excellence
+          </p>
         </div>
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-50"></div>
-          <Image
-            src="/placeholder.svg?height=600&width=1200"
-            alt="Engineering background"
-            layout="fill"
-            objectFit="cover"
-            className="mix-blend-overlay"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
+      </section>
+
+      {/* Engineering in Motion Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Engineering in Motion</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Gear System */}
+            <Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center pb-0">
+                <div className="h-40 flex items-center justify-center">
+                  <div className="relative">
+                    <svg width="80" height="80" viewBox="0 0 100 100" className="animate-spin-slow">
+                      <path
+                        d="M50 10C28.57 10 11 27.57 11 49s17.57 39 39 39 39-17.57 39-39S71.43 10 50 10zm0 70c-17.05 0-31-13.95-31-31s13.95-31 31-31 31 13.95 31 31-13.95 31-31 31z"
+                        className="fill-primary"
+                      />
+                      {[...Array(8)].map((_, i) => (
+                        <rect
+                          key={i}
+                          x="48"
+                          y="15"
+                          width="4"
+                          height="12"
+                          className="fill-primary"
+                          transform={`rotate(${i * 45} 50 50)`}
+                        />
+                      ))}
+                    </svg>
+                    <svg width="60" height="60" viewBox="0 0 100 100" 
+                         className="animate-spin-reverse-slow absolute -right-8 top-0">
+                      <path
+                        d="M50 10C28.57 10 11 27.57 11 49s17.57 39 39 39 39-17.57 39-39S71.43 10 50 10zm0 70c-17.05 0-31-13.95-31-31s13.95-31 31-31 31 13.95 31 31-13.95 31-31 31z"
+                        className="fill-primary"
+                      />
+                      {[...Array(8)].map((_, i) => (
+                        <rect
+                          key={i}
+                          x="48"
+                          y="15"
+                          width="4"
+                          height="12"
+                          className="fill-primary"
+                          transform={`rotate(${i * 45} 50 50)`}
+                        />
+                      ))}
+                    </svg>
+                  </div>
+                </div>
+                <CardTitle className="text-xl mb-2">Mechanical Systems</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  Exploring the fundamentals of mechanical engineering
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Piston System */}
+            <Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center pb-0">
+                <div className="h-40 flex items-center justify-center">
+                  <div className="relative w-20 h-32">
+                    <div className="absolute w-20 h-20 bg-primary/20 rounded-full">
+                      <div className="absolute w-16 h-16 bg-primary/40 rounded-full m-2"></div>
+                      <div className="absolute w-12 h-12 bg-primary rounded-full m-4 animate-bounce"></div>
+                    </div>
+                    <div className="absolute top-16 left-1/2 w-4 h-24 bg-primary -translate-x-1/2 animate-pulse"></div>
+                  </div>
+                </div>
+                <CardTitle className="text-xl mb-2">Dynamic Motion</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  Understanding principles of mechanical motion
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Wave System */}
+            <Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center pb-0">
+                <div className="h-40 flex items-center justify-center">
+                  <div className="w-full h-24 relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full h-16 relative overflow-hidden">
+                        <div className="absolute w-[200%] animate-wave">
+                          <svg className="w-full h-16" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                            <path
+                              fill="currentColor"
+                              className="text-primary"
+                              d="M0,160L40,149.3C80,139,160,117,240,112C320,107,400,117,480,138.7C560,160,640,192,720,186.7C800,181,880,139,960,122.7C1040,107,1120,117,1200,122.7C1280,128,1360,128,1400,128L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardTitle className="text-xl mb-2">Fluid Dynamics</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  Visualizing fluid mechanics in engineering
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

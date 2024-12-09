@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Award, Calendar, Users, BookOpen, Briefcase, LinkIcon } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Award, Calendar, Users, BookOpen, Briefcase, LinkIcon, Thermometer, Monitor, Car, Sun, Wrench } from 'lucide-react'
 
 export default function AboutUs() {
 return (
@@ -21,14 +21,21 @@ return (
           <div className="animate-fade-in-up">
             <h2 className="text-3xl font-bold mb-6">Know Us</h2>
             <p className="text-lg mb-4">
-              Mechanical Engineering Society of BIT Sindri was established to meet the diversified challenges and bring out innovative approach in the fields of Mechanical engineering. It provides industrial exposure to draw the practical application of concepts and avails its members a platform to enrich their management skills.
+              BIT Sindri, established in 1949, is among India's oldest engineering institutes, located in Dhanbad, Jharkhand. Spread across 450 acres, it offers undergraduate (B.Tech) and postgraduate (M.Tech) programs in various engineering fields.
             </p>
             <p className="text-lg mb-4">
-              Under the guidance of HOD Dr. S.K. Singh sir and other associate professors, Mechanical Engineering Society is progressing towards achieving its goals.
+              The Mechanical Engineering Department, accredited by NBA for 2023-2024, features advanced labs and workshops for hands-on learning. Under the guidance of HOD Dr. S.K. Singh sir and other associate professors, the department focuses on bridging academia with industry through regular seminars, guest lectures, and industrial visits.
             </p>
           </div>
           <div className="animate-fade-in-up animation-delay-200">
-            <Image src="/placeholder.svg" alt="Mechanical Engineering Society B.I.T Sindri" width={500} height={300} className="rounded-lg shadow-md" />
+            <Image 
+              src="/images/201.jpg" 
+              alt="Mechanical Engineering Department" 
+              width={500} 
+              height={300} 
+              className="rounded-lg shadow-md object-cover"
+              priority
+            />
           </div>
         </div>
       </div>
@@ -121,6 +128,54 @@ return (
               </p>
             </CardContent>
           </Card>
+        </div>
+      </div>
+    </section>
+
+    {/* Labs & Facilities Section */}
+    <section className="py-20 bg-muted">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Labs & Facilities</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Heat Transfer Lab",
+              description: "Advanced facilities for experiments on conduction, convection, and radiation, equipped with pin fin apparatus and emissivity meters for comprehensive thermal studies.",
+              icon: Thermometer
+            },
+            {
+              title: "CAD/CAM Lab",
+              description: "Modern facilities for 2D/3D modeling with latest software suites and hands-on learning with CNC machine simulations.",
+              icon: Monitor
+            },
+            {
+              title: "Automobile Workshop",
+              description: "Comprehensive setup for studying vehicle mechanisms including steering, braking, and engine systems, with expert-led repair training.",
+              icon: Car
+            },
+            {
+              title: "Solar Energy Lab",
+              description: "Cutting-edge facilities for experiments with photovoltaic systems and solar thermal energy applications.",
+              icon: Sun
+            },
+            {
+              title: "Material Testing Lab",
+              description: "State-of-the-art equipment for analyzing physical and mechanical properties using advanced testing machines.",
+              icon: Wrench
+            }
+          ].map((lab, index) => (
+            <Card key={lab.title} className={`animate-fade-in-up animation-delay-${index * 100}`}>
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <lab.icon className="h-8 w-8 text-primary" />
+                  <CardTitle>{lab.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{lab.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

@@ -22,23 +22,36 @@ export default function ContactUs() {
               <MapPin className="h-8 w-8 text-blue-500 mr-4" />
               <div>
                 <h2 className="text-xl font-semibold mb-2">Address</h2>
-                <p>123 Engineering Avenue<br />University Campus<br />City, State 12345</p>
+                <p>BIT Sindri<br />Dhanbad, Jharkhand<br />828123, India</p>
               </div>
             </div>
             <div className="flex items-center animate-fade-in-up animation-delay-200">
               <Phone className="h-8 w-8 text-blue-500 mr-4" />
               <div>
                 <h2 className="text-xl font-semibold mb-2">Phone</h2>
-                <p>(123) 456-7890</p>
+                <p>+91 326-2350495</p>
               </div>
             </div>
             <div className="flex items-center animate-fade-in-up animation-delay-400">
               <Mail className="h-8 w-8 text-blue-500 mr-4" />
               <div>
                 <h2 className="text-xl font-semibold mb-2">Email</h2>
-                <p>contact@mesociety.com</p>
+                <p>mes@bitsindri.ac.in</p>
               </div>
             </div>
+          </div>
+          
+          {/* Map Section */}
+          <div className="mt-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.457965416!2d86.47742661486946!3d23.653435584636536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bc9fac678481%3A0x122cb1d133a89995!2sBIT%20Sindri!5e0!3m2!1sen!2sin!4v1629901266061!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -68,23 +81,6 @@ export default function ContactUs() {
             </div>
             <Button type="submit" className="w-full">Send Message</Button>
           </form>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Location</h2>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412634965843!2d-73.98630492404069!3d40.74844097138946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1628716703264!5m2!1sen!2sus"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
         </div>
       </section>
     </div>

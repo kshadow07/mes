@@ -55,9 +55,36 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
-  },
+  		},
+		// Add to the existing animation config {
+	animation: {
+	  'spin-slow': 'spin 8s linear infinite',
+	  'spin-reverse-slow': 'spin-reverse 6s linear infinite',
+	  'piston-rotate': 'piston-rotate 2s linear infinite',
+	  'piston-move': 'piston-move 2s ease-in-out infinite',
+	  'wave': 'wave 3s ease-in-out infinite',
+	},
+	keyframes: {
+	  'spin-reverse': {
+		'0%': { transform: 'rotate(360deg)' },
+		'100%': { transform: 'rotate(0deg)' },
+	  },
+	  'piston-rotate': {
+		'0%': { transform: 'rotate(0deg)' },
+		'100%': { transform: 'rotate(360deg)' },
+	  },
+	  'piston-move': {
+		'0%, 100%': { transform: 'translateY(0)' },
+		'50%': { transform: 'translateY(40px)' },
+	  },
+	  'wave': {
+		'0%': { transform: 'translateX(0)' },
+		'50%': { transform: 'translateX(-50%)' },
+		'100%': { transform: 'translateX(0)' },
+	  },
+	},
+  }
+},
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
